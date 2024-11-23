@@ -1,12 +1,11 @@
 package com.example;
 
-import org.junit.jupiter.api.Test; // Импорт для JUnit 5
-import static org.junit.jupiter.api.Assertions.assertTrue; // Импорт для утверждений
+   import org.junit.jupiter.api.Test;
+   import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class AppTest {
-    
-    @Test
-    public void testApp() {
-        assertTrue(true); // Простой тест, который всегда проходит
+   public class AppTest {
+       @Test
+       public void testApp() {
+           assertTrue(true);
     }
 }
