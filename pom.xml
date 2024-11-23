@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        
+        <!-- Зависимость для JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -22,6 +22,15 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source> <!-- Укажите версию Java для компиляции -->
+                    <target>11</target> <!-- Укажите версию Java для выходного файла -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
@@ -29,7 +38,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.example.App</mainClass> 
+                            <mainClass>com.example.App</mainClass> <!-- Укажите основной класс -->
                         </manifest>
                     </archive>
                 </configuration>

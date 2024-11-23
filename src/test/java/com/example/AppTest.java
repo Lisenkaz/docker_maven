@@ -1,7 +1,7 @@
 package com.example;
 
-import org.junit.Test;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test; // Импорт для JUnit 5
+import static org.junit.jupiter.api.Assertions.assertTrue; // Импорт для утверждений
 
 public class AppTest {
     
