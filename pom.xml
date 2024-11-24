@@ -19,7 +19,6 @@
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- Другие зависимости вашего проекта -->
     </dependencies>
 
     <build>
@@ -40,7 +39,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.example.App</mainClass> <!-- Убедитесь, что указали правильный класс -->
+                            <mainClass>com.example.App</mainClass> <!-- Убедитесь, что здесь указан правильный класс -->
                         </manifest>
                     </archive>
                 </configuration>
