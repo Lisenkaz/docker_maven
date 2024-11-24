@@ -13,7 +13,14 @@
     </properties>
 
     <dependencies>
-        <!-- Ваши зависимости -->
+        <!-- Зависимость для JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Другие зависимости вашего проекта -->
     </dependencies>
 
     <build>
