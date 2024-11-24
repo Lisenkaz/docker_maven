@@ -13,7 +13,6 @@
     </properties>
 
     <dependencies>
-        <!-- Зависимость для JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -41,8 +40,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>com.example.App</mainClass> <!-- Замените на ваш основной класс -->
+                            <mainClass>com.example.App</mainClass> <!-- Убедитесь, что указали правильный класс -->
                         </manifest>
                     </archive>
                 </configuration>

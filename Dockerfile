@@ -1,8 +1,13 @@
-FROM maven:3.6.3-jdk-11 AS build
-COPY . /app
+# Этап сборки
+FROM maven:3.8.6-openjdk-11-slim AS build
 WORKDIR /app
+COPY pom.xml .
+COPY src ./src
 RUN mvn clean package
 
-FROM openjdk:11-jre-slim
-COPY --from=build /app/target/*.jar /app.jar
-CMD ["java", "-jar", "/app.jar"]
+# Этап выполнения
+FROM openjdk:11-slim
+WORKDIR /app
+COPY --from=build /app/target/docker-maven-1.0-SNAPSHOT.jar app.jar
+EXPOSE 8080  # Убедитесь, что здесь указан порт 8080
+CMD ["java", "-jar", "app.jar"]
